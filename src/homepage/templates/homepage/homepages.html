@@ -1,0 +1,45 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid p-0 front-block" id="homepages-image">
+    <img class="img-fluid" src="{% static 'homepage/images/macbook1_front.jpg' %}" alt="Bild Macbook">
+    <div class="front-text">
+        <h1 class="display-1">Homepages</h1>
+        <h2></h2>
+    </div>
+</div>
+
+<div class="container services">
+        <hr class="featurette-divider">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="my-4">
+                Einfache Lösungen mit modernen Technologien
+            </h1>
+            <p class="lead">
+                Die Homepages werden mit Wordpress oder mit klassischem HTML/CSS erstellt und gepflegt. Das Wordpress CMS bietet einfachen Zugang, ist leicht zu warten und besitzt eine ausgeprägte Rechteverwaltung. Diese ermöglicht eine effektive Redaktion und Organisation. Übernehmen Sie die volle Kontrolle über Ihre Seite oder delegieren Sie redaktionelle Aufgaben an Ihre Mitarbeiter. Aufgaben der Homepage können spezifisch und effizient an Personen delegiert werden, die wenig Erfahrung haben im Bereich Web oder Programmierung. Das CMS ist für einfache Projekte gut geeignet und gleichzeitig auch sehr leicht zu erweitern. <br> Für komplexe Aufgaben eignen sich klassische Webapplikationen mit HTML und CSS. Ich verwende dafür das Django Framework als Backend. Ein solches System bietet sich an für spezielle Aufgaben, wie Datentagging oder Umfragewerkzeuge. Die Entwicklung ist aufwendiger und bietet sich an für spezifische Problemstellungen mit einem komplexen Datenfluss. Beide Systeme werden auf der Amazon Cloud AWS gehostet und lassen sich in der Cloud einfach skalieren und mit anderen Prozessen kombinieren. Die Kosten lassen sich gut überwachen. Die Vorteile einer Cloud Lösung sind vielfältig. <br> Bei Fragen helfe ich Ihnen gerne weiter. Schreiben Sie eine Email oder rufen Sie an.
+            </p>
+        </div>
+        <div class="col-md-4 text-center" id="homepage-side">
+            <i class="fab fa-wordpress"></i>
+            <h3>WORDPRESS</h3>
+            <br>
+            <div class="container">
+                <img style="width:8rem" class="img-fluid" src="{% static 'homepage/images/aws_logo.jpg' %}" alt="">
+            </div>
+            <br>
+                <img style="width:8rem" class="img-fluid" src="{% static 'homepage/images/django_logo.png' %}" alt="">
+            <br>
+            <i class="fas fa-code"></i>
+            <h3>HTML5</h3>
+            <i class="fab fa-css3"></i>
+            <h3>CSS3</h3>
+            <i class="fas fa-bold"></i>
+            <h3>BOOTSTRAP 4</h3>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+</div>
+
+{% endblock content %}

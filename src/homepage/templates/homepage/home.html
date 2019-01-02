@@ -1,5 +1,59 @@
 {% extends 'homepage/base.html' %}
 {% load static %}
+
 {% block content %}
+
+<div class="container-fluid p-0 front-block">
+    <img class="img-fluid" src="{% static 'homepage/images/alpstein.jpg' %}" alt="">
+    <div class="front-text">
+        <h1 class="display-1">Willkommen bei Silvani Services</h1>
+        <h2>Digital Services at your Fingertips</h2>
+    </div>
+</div>
+
+<div class="container">
+    
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Text und Redaktion. <span class="text-muted">Content ist King</span></h2>
+            <p class="lead">Sie brauchen einen ansprechenden Text für einen Artikel, ein kurzes Skript oder einen Entwurf für eine Ansprache? Oder Sie brauchen jemanden, der Inhalte auf Ihrer Homepage oder einen Newsletter redigiert? Sie suchen ein zweites Paar Augen fürs Korrekturlesen? Es braucht Erfahrung, um gute Texte zu schreiben. Fragen Sie an, um zu erfahren, welche Textsorten und welche Thementiefe verfügbar sind.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <a href="{% url 'editing' %}"><img class="featurette-image img-fluid mx-auto" src="{% static 'homepage/images/macbook3_small.jpg' %}" alt="Macbook Bild"></a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Powerpoint, Keynote oder Google Slides. <span class="text-muted">Ihre Präsentation macht Eindruck</span></h2>
+            <p class="lead">Man benötigt oft kurzfristig eine ansprechende Präsentation oder ein paar Folien für die Pause zwischendurch. Silvani Services nimmt Ihnen diese Arbeit ab und erstellt schnell und günstig einen guten Auftritt. Unterstützt werden die gängigsten Programme wie Powerpoint von Microsoft, Keynote von Apple oder das kostenlose Angebot von Google Slides. Mit einem Email oder einem Anruf erfahren Sie mehr.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <a href="{% url 'presentations' %}"><img class="featurette-image img-fluid mx-auto" src="{% static 'homepage/images/macbook2_small.jpg' %}" alt="Macbook Bild"></a>
+        </div>
+    </div>
+    
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Ihr persönlicher Webauftritt. <span class="text-muted">Von einfach bis komplex</span></h2>
+            <p class="lead">Sei es eine einfache Homepage für Ihren Verein oder ein komplexes System für Datentagging. Das Wordpress CMS ermöglicht eine einfache Redaktion und Verwaltung. Klassische Webtechnologien und Frameworks funktionieren hervorragend für komplexe Aufgaben. Übernehmen Sie die volle Kontrolle über Ihre Seite oder delegieren Sie Aufgaben an Ihre Mitarbeiter. Die Homepage wird nach Ihren Wünschen und Vorstellungen konfiguriert.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <a href="{% url 'homepages' %}"><img class="featurette-image img-fluid mx-auto" src="{% static 'homepage/images/macbook1_small.jpg' %}" alt="Macbook Bild"></a>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+    
+</div>
 
 {% endblock content %}

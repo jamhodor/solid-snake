@@ -1,0 +1,39 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid p-0 front-block" id="presentations-image">
+    <img class="img-fluid" src="{% static 'homepage/images/macbook2_front.jpg' %}" alt="Bild Macbook">
+    <div class="front-text">
+        <h1 class="display-1">Präsentationen</h1>
+        <h2></h2>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
+    <div class="row" >  
+        <div class="col-md-8">
+            <h1 class="my-4">
+                Passende Folien für ihren Auftritt
+            </h1>
+            <p class="lead">                    
+                    PowerPoint ist wichtiges Werkzeug im Alltag, im Büro oder in einer Vorlesung. Der Einsatz heutiger Präsentationen ist vielfältig und findet oft an vorderster Front statt. Es lohnt sich für diese Aufgabe einen passenden Dienstleister zu finden. Gute Präsentationen unterstützen Ihren Vortrag und lenken nicht ab. Weniger Text und ein grosszügiger Gebrauch von Bildmaterial machen eine Präsentation attraktiver. Leichtfertig vergibt man Punkte beim Publikum, indem man Text oder eine Liste nacherzählt. Behalten Sie das narrativ bei sich und lassen Sie die Folien den Vortrag optisch unterstützen. <br> Es lohnt sich das Internet nach Tips und Techniken zu durchsuchen und falls Sie diese Zeit nicht haben, kontaktieren Sie einfach Silvani Services.
+            </p>
+
+        </div>
+        <div class="col-md-4">
+            <img class="img-fluid" src="{% static 'homepage/images/presentation1b.jpg' %}"  alt="">
+            <br>
+            <br>
+            <img class="img-fluid" src="{% static 'homepage/images/presentation2b.jpg' %}"  alt="">
+            <br>
+            <br>
+            <img class="img-fluid" src="{% static 'homepage/images/presentation3b.jpg' %}"  alt="">
+        </div> 
+
+    </div>
+    <hr class="featurette-divider">
+</div>
+
+{% endblock content %}

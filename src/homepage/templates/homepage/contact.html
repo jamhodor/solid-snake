@@ -1,0 +1,31 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid p-0 front-block" id="kontakt-image">
+    <h2></h2>
+    <img class="img-fluid" src="{% static 'homepage/images/retro_telephone.jpg' %}" alt="">
+    <div class="front-text">
+        <h1 class="display-1">Kontakt</h1>
+    </div>
+</div>
+
+
+<div id="kontakt" class="container">
+    <hr class="featurette-divider">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>
+                Einfach Fragen
+            </h4>
+            <p>Gerne setze ich mich mit Ihnen zusammen, um ihr Projekt zu besprechen und Lösungen vorzuschlagen. Scheuen Sie sich nicht anzurufen oder ein Email zu schreiben, um einen ersten Eindruck zu erhalten oder um die Kosten abzuschätzen.</p>
+        </div>
+                <div class="col-md-4">
+                <img class="img-fluid" src="{% static 'homepage/images/contact.jpg' %}" alt="">    
+                </div>
+        
+    </div>
+    <hr class="featurette-divider">
+</div>
+
+{% endblock content %}

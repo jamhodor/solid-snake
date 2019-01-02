@@ -1,0 +1,158 @@
+html { font-size: 16px }
+
+/* navigation */
+
+#navbarNav li a {
+    font-size: 110%;
+    font-family: 'Glegoo', serif;
+    color: #6e8896;
+}
+#navbarNav li a:hover {
+    opacity: 0.80;
+}
+.navbar-brand {
+    margin: 5px;
+}
+.navbar {
+    opacity: 0.98;
+}
+#navbarNav ul {
+    margin-bottom: -10px;
+    margin-right: 20px;
+}
+#navbarNav span {
+    margin-top: 8px;
+    color: #6e8896;
+}
+#blog-nav a {
+      color: #326FAF !important;
+}
+
+.active {
+    /* font-weight: 600; */
+    color: black !important;
+}
+
+/* front block  */
+
+.front-block {
+    position: relative;
+    text-align: center;
+    color: white; 
+    
+    /* margin-bottom: 0px; */
+}
+
+.front-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 15px;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 60px grey;
+
+}
+
+/* content  */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+  }
+
+body {
+    /* margin-top: 30px; */
+}
+
+.featurette-divider {
+    margin: 4rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+
+.services {
+    margin-top: 30px;
+}
+
+.fa-code, .fa-bold, .fa-css3, .fa-wordpress, .fa-python, .fa-joomla {
+    font-size: 4em;
+    margin: 1rem;
+  }
+  .fa-code {
+    color: #e54d26;
+  }
+  
+  .fa-bold {
+    color: #563d7c;
+  }
+  
+  .fa-css3 {
+    color: #2163af;
+  }
+  
+  .fa-wordpress {
+    color: #21759b;
+  }
+  
+  .fa-python {
+    color: #092E20;
+  }
+
+
+  /* about  */
+
+  #about {
+      margin-top: 2rem;
+  }
+
+  /* footer  */
+  
+footer {
+    margin-left: 20px;
+    margin-top: 50px;
+    color: #6e8896;
+}
+footer i {
+    margin-right: 10px;
+}
+
+footer p a {
+    color: #326FAF;
+}
+
+#footer-left a {
+    text-decoration: none;
+}
+#footer-left a:hover {
+    text-decoration: none;
+    opacity: 0.80;
+}
+
+
+  /* blog */
+  
+  .btn-primary {
+    background-color: #326FAF;
+    border-color: #326FAF;
+}
+  .btn-primary:hover {
+    background-color: black;
+    border-color: #326FAF;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .front-text h1{
+    font-size: 2em;
+    }
+    .front-text h2{
+    font-size: 0.8em;
+    }
+  }

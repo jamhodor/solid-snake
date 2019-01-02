@@ -1,0 +1,26 @@
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'homepage/images/logo.gif' %}" height="25" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a {% if active == "editing" %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'editing' %}">Texte</a>
+        </li>
+        <li class="nav-item">
+          <a {% if active == "presentations" %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'presentations' %}">Präsentationen</a>
+        </li>
+        <li class="nav-item">
+          <a {% if active == "homepages" %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="{% url 'homepages' %}">Homepages</a>
+        </li>
+        <span>
+            &bull;
+        </span>
+        <li class="nav-item" id="blog-nav">
+          <a class="nav-link"  href="#">{% if active == "blog" %} Blog! {% else %} Blog {% endif %}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
