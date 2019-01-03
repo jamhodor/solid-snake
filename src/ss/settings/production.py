@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SKEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['ec2-18-185-139-249.eu-central-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'homepage',
+    'blog',
 ]
 
 MIDDLEWARE = [

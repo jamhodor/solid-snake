@@ -9,4 +9,6 @@ urlpatterns = [
     path('kontakt', views.contact, name='contact'),
     path('impressum', views.disclaimer, name='disclaimer'),
 
+    # App URLs
+    path('blog/', include('blog.urls')),
 ]

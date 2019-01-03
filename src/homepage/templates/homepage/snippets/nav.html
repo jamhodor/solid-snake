@@ -19,7 +19,7 @@
             &bull;
         </span>
         <li class="nav-item" id="blog-nav">
-          <a class="nav-link"  href="#">{% if active == "blog" %} Blog! {% else %} Blog {% endif %}</a>
+          <a class="nav-link"  href="{% url 'blog' %}">{% if active == "blog" %} Blog! {% else %} Blog {% endif %}</a>
         </li>
       </ul>
     </div>
