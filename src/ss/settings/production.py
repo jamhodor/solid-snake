@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SKEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ec2-18-185-139-249.eu-central-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['www.silvaniservices.ch', 'silvaniservices.ch']
 
 
 # Application definition
