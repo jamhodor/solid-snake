@@ -142,10 +142,14 @@ footer p a {
     border-color: #326FAF;
 }
   .btn-primary:hover {
-    background-color: black;
+    background-color: #326FAF;
+    opacity: 0.90;
     border-color: #326FAF;
 }
 
+.card-img-top {
+    margin-bottom: 1rem;
+}
 
 
 @media screen and (max-width: 600px){

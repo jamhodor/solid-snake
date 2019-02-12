@@ -1,8 +1,10 @@
 .DS_Store
+
 venv/
-.vscode
+.vscode/
 
 db.sqlite3
+data/
 
 __pycache__/
 *.py[cod]

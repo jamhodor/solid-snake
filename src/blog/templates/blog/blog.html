@@ -1,6 +1,8 @@
 {% extends 'homepage/base.html' %}
 {% load static %}
 
+{% block head_title %}Blog || {{ block.super }}{% endblock head_title %}
+
 {% block content %}
 
 <!-- Front Image -->
@@ -8,7 +10,7 @@
     <img class="img-fluid" src="{% static 'blog/images/blog.jpg' %}" alt="">
     <div class="front-text">
         <h1 class="display-1">Blog</h1>
-        <h2>Coming Soon!</h2>
+        <h2>Have a nice Read!</h2>
     </div>
 </div>
 
@@ -19,65 +21,29 @@
         
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-              <h1 class="my-4">Der Blog ist im Aufbau und ist bald wieder online
-                <!-- <small>Kommen Sie wieder!</small> -->
-            </h1>
-
+            {% for post in posts %}
+            <div class="card mb-4">
+                <a href="{% url 'blog_detail' pk=post.pk %}"> <img class="card-img-top" src="{{ post.picture.url }}" alt="Blog Picture"></a>
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.content|truncatewords:30|linebreaksbr|safe }}</p>
+                    <a href="{% url 'blog_detail' pk=post.pk %}" class="btn btn-primary">Weiterlesen &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Veröffentlich am {{ post.posted }} von {{ post.author }}
+                    <!-- <a href="#">Start Bootstrap</a> -->
+                </div>
+            </div>
+            {% endfor %}
         </div>
         
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-            
-            <!-- Search Widget -->
-            <!-- <div class="card my-4">
-                <h5 class="card-header">Search</h5>
-                <div class="card-body">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-secondary" type="button">Go!</button>
-                        </span>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- Side Widget -->
-            <!-- <div class="card my-4">
-                <h5 class="card-header">Events</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                    
-                    <br>
-                    <br>
-                    <img src="/media/images/highres_476636587.png" alt="" class="img-fluid">
-                </div>
-            </div> -->
-            
-            <!-- Side Widget -->
-            <!-- <div class="card my-4">
-                <h5 class="card-header">Empfohlene Seiten</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                </div>
-            </div> -->
-            
-            <!-- Side Widget -->
-            <!-- <div class="card my-4">
-                <h5 class="card-header">Ankündigungen</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                </div>
-            </div> -->
-            
-            <!-- Categories Widget -->
-           
-            
-        </div>
+    {% include 'blog/sidebar.html' %}
         
     </div>
-    <!-- /.row -->
+
     <hr class="featurette-divider">
+
 </div>
-<!-- /.container -->
+
 
 {% endblock content %}

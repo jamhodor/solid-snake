@@ -1,0 +1,65 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block head_title %}Blog || {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<div class="container">
+    <hr class="featurette-divider">
+    <div class="row">
+        
+        <div class="col-md-8">
+            <img class="card-img-top" src="{{ post.picture.url }}" alt="Card image cap">
+            
+            <h1 class="">
+                {{ post.title }}
+            </h1>
+            <p>
+                {{ post.content|safe|linebreaksbr}}
+            </p>
+            <div class="text-muted small">
+                Veröffentlich am {{ post.posted }} von {{ post.author }}
+            </div>
+            <hr class="featurette-divider">
+            <a href="{% url 'blog' %}" class="btn btn-primary">&larr; Blog </a>
+        </div>
+
+
+        <div class="col-md-4">
+            
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Events</h5>
+                <div class="card-body">
+                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                    
+                    <br>
+                    <br>
+                    <img src="/media/images/highres_476636587.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Empfohlene Seiten</h5>
+                <div class="card-body">
+                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                </div>
+            </div>
+            
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Ankündigungen</h5>
+                <div class="card-body">
+                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+{% endblock content %}
