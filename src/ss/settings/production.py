@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'tinymce',
+
     'homepage',
     'blog',
 ]
@@ -131,3 +133,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'data/', 'static/')
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'data/', 'media')
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+     'width': '100%',
+    'height': 500,
+}

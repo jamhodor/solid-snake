@@ -1,5 +1,5 @@
    <!-- Sidebar Widgets Column -->
-   <div class="col-md-4">
+<div class="col-md-4">
     
     <!-- Search Widget -->
     <!-- <div class="card my-4">
@@ -15,31 +15,29 @@
     </div> -->
     
     <!-- Side Widget -->
+    {% for event in events %}
     <div class="card my-4">
-        <h5 class="card-header">Events</h5>
+        <h5 class="card-header">{{ event.title }}</h5>
         <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-            
-            <br>
-            <br>
-            <img src="/media/images/highres_476636587.png" alt="" class="img-fluid">
+            <a href="{{ event.link_url }}"> <img src="{{ event.event_picture.url }}" alt="{{ event.title }}" class="img-fluid"></a>
         </div>
     </div>
+    {% endfor %}
     
     <!-- Side Widget -->
-    <div class="card my-4">
+    <!-- <div class="card my-4">
         <h5 class="card-header">Projekte</h5>
         <div class="card-body">
             You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
         </div>
-    </div>
+    </div> -->
     
     <!-- Side Widget -->
-    <div class="card my-4">
+    <!-- <div class="card my-4">
         <h5 class="card-header">Ankündigungen</h5>
         <div class="card-body">
             You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
         </div>
-    </div>
+    </div> -->
     
 </div>

@@ -1,5 +1,11 @@
 html { font-size: 16px }
 
+a {color: #326FAF;}
+a:hover {
+    opacity: 0.80;
+    text-decoration: none;
+}
+
 /* navigation */
 
 #navbarNav li a {
@@ -12,6 +18,9 @@ html { font-size: 16px }
 }
 .navbar-brand {
     margin: 5px;
+}
+.navbar-brand:hover {
+    opacity: 1;
 }
 .navbar {
     opacity: 0.98;
@@ -74,42 +83,46 @@ body {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -.05rem;
-  }
+}
 
 .services {
     margin-top: 30px;
 }
 
+.service-text {
+    text-align: justify;
+}
+
 .fa-code, .fa-bold, .fa-css3, .fa-wordpress, .fa-python, .fa-joomla {
     font-size: 4em;
     margin: 1rem;
-  }
-  .fa-code {
+}
+.fa-code {
     color: #e54d26;
-  }
-  
-  .fa-bold {
+}
+
+.fa-bold {
     color: #563d7c;
-  }
-  
-  .fa-css3 {
+}
+
+.fa-css3 {
     color: #2163af;
-  }
-  
-  .fa-wordpress {
+}
+
+.fa-wordpress {
     color: #21759b;
-  }
-  
-  .fa-python {
+}
+
+.fa-python {
     color: #092E20;
-  }
+}
 
 
-  /* about  */
+/* about  */
 
-  #about {
-      margin-top: 2rem;
-  }
+#about {
+    margin-top: 2rem;
+}
 
   /* footer  */
   
@@ -135,13 +148,13 @@ footer p a {
 }
 
 
-  /* blog */
-  
-  .btn-primary {
+/* blog */
+
+.btn-primary {
     background-color: #326FAF;
     border-color: #326FAF;
 }
-  .btn-primary:hover {
+.btn-primary:hover {
     background-color: #326FAF;
     opacity: 0.90;
     border-color: #326FAF;

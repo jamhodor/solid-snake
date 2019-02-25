@@ -23,14 +23,14 @@
         <div class="col-md-8">
             {% for post in posts %}
             <div class="card mb-4">
-                <a href="{% url 'blog_detail' pk=post.pk %}"> <img class="card-img-top" src="{{ post.picture.url }}" alt="Blog Picture"></a>
+                <a href="{% url 'blog_detail' pk=post.pk %}"> <img class="card-img-top" src="{{ post.title_picture.url }}" alt="Blog Picture"></a>
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text">{{ post.content|truncatewords:30|linebreaksbr|safe }}</p>
+                    <h2 class="card-title">{{ post.title }} <span class="text-muted small">{{ post.sub_title }}</span></h2>
+                    <p class="card-text">{{ post.content|truncatewords:30|safe }}</p>
                     <a href="{% url 'blog_detail' pk=post.pk %}" class="btn btn-primary">Weiterlesen &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">
-                    Veröffentlich am {{ post.posted }} von {{ post.author }}
+                    Veröffentlich am {{ post.posted_on }} von {{ post.author }}
                     <!-- <a href="#">Start Bootstrap</a> -->
                 </div>
             </div>
