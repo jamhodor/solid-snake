@@ -128,16 +128,19 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'data/', 'static/')
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'data/', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'data/', 'media/')
 
 MEDIA_URL = '/media/'
 
 
+# TINYMCE_JS_ROOT = os.path.join(MEDIA_ROOT, "tiny_mce/")
+# TINYMCE_JS_URL = os.path.join(MEDIA_URL, "tiny_mce/tiny_mce.js")
+
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,paste,searchreplace",
+    'plugins': "",
     'theme': "advanced",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
-     'width': '100%',
+    'width': '100%',
     'height': 500,
 }

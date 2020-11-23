@@ -21,7 +21,7 @@ class Author(models.Model):
 
 class Post(models.Model):
     title   = models.CharField(max_length=150)
-    title_picture = models.ImageField(upload_to='images/blog/', max_length=60, blank=True)
+    title_picture = models.ImageField(upload_to='images/blog/', max_length=60)
 
     content = tinymce_models.HTMLField()
 
